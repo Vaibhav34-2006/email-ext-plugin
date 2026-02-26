@@ -213,6 +213,12 @@ To see a list of all available email tokens and what they display, click on the 
 
 As of version 2.22, this plugin also supports tokens provided by the https://plugins.jenkins.io/token-macro/[Token Macro plugin].
 You can see the available *Token Macro Plugin Tokens* below the *Extended Email Publisher Specific Tokens* when you click on the "?" (question mark) associated with the *Content Token Reference* in the *Editable Email Notification* section of the project configuration page.
+[NOTE]
+====
+If the file referenced by the `${FILE}` token does not exist in the workspace,
+email delivery may be skipped. Ensure the file is created earlier in the build
+or configure fallback recipients to avoid missing notifications.
+====
 
 === Jelly script content templates
 
